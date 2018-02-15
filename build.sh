@@ -1,12 +1,12 @@
 #! /bin/sh
-
-project="<YOUR PROJECT NAME HERE>"
+# Other name: Ad Astra
+project="Following the Light of the Sun"
 
 echo "Attempting to build $project for Windows"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity 
   -batchmode 
   -nographics 
-  -silent-crashes 
+  # -silent-crashes 
   -logFile $(pwd)/unity.log 
   -projectPath $(pwd) 
   -buildWindowsPlayer "$(pwd)/Build/windows/$project.exe" 
@@ -16,7 +16,7 @@ echo "Attempting to build $project for OS X"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity 
   -batchmode 
   -nographics 
-  -silent-crashes 
+  # -silent-crashes 
   -logFile $(pwd)/unity.log 
   -projectPath $(pwd) 
   -buildOSXUniversalPlayer "$(pwd)/Build/osx/$project.app" 
@@ -26,7 +26,7 @@ echo "Attempting to build $project for Linux"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity 
   -batchmode 
   -nographics 
-  -silent-crashes 
+  # -silent-crashes 
   -logFile $(pwd)/unity.log 
   -projectPath $(pwd) 
   -buildLinuxUniversalPlayer "$(pwd)/Build/linux/$project.exe" 
