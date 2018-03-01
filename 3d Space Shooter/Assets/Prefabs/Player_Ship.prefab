@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4150072550218958}
   - component: {fileID: 114704391673166108}
   - component: {fileID: 54259499845755546}
-  - component: {fileID: 136067937756851274}
+  - component: {fileID: 64144180417220312}
   m_Layer: 0
   m_Name: Player_Ship
   m_TagString: Player
@@ -161,6 +161,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &64144180417220312
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1924447412616352}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 4534dec104be08e418b20ba5844a0390, type: 3}
 --- !u!114 &114704391673166108
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -172,21 +186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d141674ff4a56f54e8ce583b3df3757b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 20
+  maxSpeed: 50
   rotationSpeed: 180
   shot: {fileID: 1588662006742616, guid: 80a56766935b53d4cbce2ae3969f13b7, type: 2}
   shotSpawn: {fileID: 4903405584849636}
   fireRate: 0.25
---- !u!136 &136067937756851274
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1924447412616352}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 2.7161164
-  m_Height: 20.6
-  m_Direction: 2
-  m_Center: {x: 0.08388451, y: 0, z: 0}

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Boundry
   - Enemy
+  - asteroid
   layers:
   - Default
   - TransparentFX

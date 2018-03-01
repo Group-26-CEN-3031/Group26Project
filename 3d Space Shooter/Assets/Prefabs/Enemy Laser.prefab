@@ -156,7 +156,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -224,6 +224,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 0}
   playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
+  health: 100
+  playerHealth: {fileID: 0}
 --- !u!114 &114594471967638368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cff86eab09e4cc4a8ca6841eef93049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
+  speed: 70
 --- !u!136 &136942120347947902
 CapsuleCollider:
   m_ObjectHideFlags: 1
