@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Controller : MonoBehaviour {
     public float maxSpeed = 3f;
@@ -8,13 +9,18 @@ public class Player_Controller : MonoBehaviour {
 
     //publics for the lasers
     public GameObject shot;
+	public static GameObject player;
     public Transform shotSpawn;
     public float fireRate;
+	public Slider healthBar;
+	public static int health;
 
     private float nextFire;
 
-
-   
+	void Start()
+	{
+		health = 10;
+	}
 
     // Use this for initialization
     void Update()
@@ -58,7 +64,20 @@ public class Player_Controller : MonoBehaviour {
         pos -= rot * velocity;
 
         transform.position = pos;
+
+		healthBar.value = health;
     }
+
+	public static void DecreaseHealth(int amount)
+	{
+		if (health <= 0) 
+		{
+			Player_Controller.player.SetActive (false);
+		}
+			
+		else
+			health -= amount;
+	}
 
 
 }

@@ -8,11 +8,12 @@ public class Destroy_By_COntact : MonoBehaviour {
 
     public GameObject explosion;
     public GameObject playerExplosion;
-    public int health = 100;
-    public Text playerHealth;
+	public static bool gameOver = false;
 
     void OnTriggerEnter(Collider other)
     {
+		int health = Player_Controller.health;
+		
         // If it was a boundry collision, just shrug and move on. 
         if (other.tag == "Boundry" || other.tag == "Enemy")
         {
@@ -22,22 +23,25 @@ public class Destroy_By_COntact : MonoBehaviour {
         if(explosion != null)
         {
             Instantiate(explosion, transform.position, transform.rotation);
-            health--;
+
             if (health == 0)    //object dead
-            {
-                Destroy(gameObject);
-            }
-            playerHealth.text = "Health: " + health.ToString();     //update health UI (make sure UI attached to player ship health variable)
+				gameObject.SetActive(false);
+
+			else
+				Player_Controller.DecreaseHealth (1);
+          
         }
         // If contact was with player, add the unique player explosion effect, destroy object.
         if (other.tag == "Player")
         {
             Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-            health--;
             if (health == 0)    //object dead
             {
-                Destroy(gameObject);
+				gameObject.SetActive(false);
             }
+
+			else
+				Player_Controller.DecreaseHealth (1);
         }
 
         if(other.tag == "asteroid")     //if contact hit with an asteroid, we want the asteroid to explode
