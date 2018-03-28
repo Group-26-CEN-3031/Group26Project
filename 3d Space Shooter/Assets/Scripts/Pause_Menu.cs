@@ -37,7 +37,19 @@ public class Pause_Menu : MonoBehaviour {
 		GameIsPaused = true;
 	}
 
-	public void LoadMenu()
+    public void SaveGame()
+    {
+        SaveData.current.Save();
+        SaveLoad.Save();
+    }
+
+    public void LoadGame()
+    {
+        SaveLoad.Load();
+        SaveData.current.Load();
+    }
+
+    public void LoadMenu()
 	{
 		Time.timeScale = 1f;
 		GameIsPaused = false;
