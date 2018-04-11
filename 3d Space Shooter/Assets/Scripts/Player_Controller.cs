@@ -1,7 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
+
+
+[System.Serializable]
 
 public class Player_Controller : MonoBehaviour {
     public float maxSpeed = 3f;
@@ -20,6 +24,14 @@ public class Player_Controller : MonoBehaviour {
 
     public int coin = 0;
     public Text playerCoin;
+	public Slider healthBar;
+	public static CharacterStats myStats;
+
+
+	void Start()
+	{
+		myStats = GetComponent<CharacterStats>();
+	}
 
     // Use this for initialization
     void Update()
@@ -63,7 +75,10 @@ public class Player_Controller : MonoBehaviour {
         pos -= rot * velocity;
 
         transform.position = pos;
+        
+        healthBar.value = myStats.currentHealth;
     }
+
 
     //collecting scrap/coin
     void OnTriggerEnter(Collider other)
@@ -91,4 +106,6 @@ public class Player_Controller : MonoBehaviour {
             storeUI.SetActive(true);
         }
     }
+
+
 }
