@@ -9,46 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1935285983464690}
+  m_RootGameObject: {fileID: 1639621874231244}
   m_IsPrefabParent: 1
---- !u!1 &1935285983464690
+--- !u!1 &1639621874231244
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4588852572940890}
-  - component: {fileID: 33792927647490550}
-  - component: {fileID: 65736436695175104}
-  - component: {fileID: 23513547521685694}
-  - component: {fileID: 114684051809766874}
+  - component: {fileID: 4654191408793530}
+  - component: {fileID: 33542953722740682}
+  - component: {fileID: 65592430089348522}
+  - component: {fileID: 23424322532389842}
+  - component: {fileID: 114077790621880968}
   m_Layer: 0
-  m_Name: Asteroid Dust
+  m_Name: SpeedBoost
   m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4588852572940890
+--- !u!4 &4654191408793530
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1935285983464690}
+  m_GameObject: {fileID: 1639621874231244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.569, y: 0, z: 0}
+  m_LocalPosition: {x: 30.8, y: 0, z: -15.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23513547521685694
+--- !u!23 &23424322532389842
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1935285983464690}
+  m_GameObject: {fileID: 1639621874231244}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -56,7 +56,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 0}
   m_StaticBatchInfo:
@@ -78,34 +77,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33792927647490550
+--- !u!33 &33542953722740682
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1935285983464690}
+  m_GameObject: {fileID: 1639621874231244}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65736436695175104
+--- !u!65 &65592430089348522
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1935285983464690}
+  m_GameObject: {fileID: 1639621874231244}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114684051809766874
+--- !u!114 &114077790621880968
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1935285983464690}
+  m_GameObject: {fileID: 1639621874231244}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d88ad3d781ef6f46862a334f5474e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 74b629c5440f9014d9a25620a2dc03c6, type: 2}
+  item: {fileID: 11400000, guid: 6a2412e94880853469e78f07a1dcb707, type: 2}

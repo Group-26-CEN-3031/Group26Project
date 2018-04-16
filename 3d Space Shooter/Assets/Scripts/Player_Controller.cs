@@ -36,6 +36,12 @@ public class Player_Controller : MonoBehaviour {
     // Use this for initialization
     void Update()
     {
+
+        if(EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
 		//Prevents shot from fireing while game is paused
 		if (!Pause_Menu.GameIsPaused) 
 		{
