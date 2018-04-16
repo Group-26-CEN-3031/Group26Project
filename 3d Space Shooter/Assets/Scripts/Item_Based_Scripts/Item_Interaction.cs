@@ -11,10 +11,6 @@ public class Item_Interaction : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            //this is a workaround to prevent ship from losing health on pickup
-
-            // Player_Controller.health = Player_Controller.health + 1;
-
             
             bool wasPickedUp = Inventory.instance.Add(item);
 

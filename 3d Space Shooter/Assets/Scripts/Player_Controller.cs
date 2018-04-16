@@ -8,7 +8,7 @@ using UnityEngine.UI;
 [System.Serializable]
 
 public class Player_Controller : MonoBehaviour {
-    public float maxSpeed = 3f;
+    public float maxSpeed;
     public float rotationSpeed = 180f;
 
     //publics for the lasers
@@ -25,12 +25,14 @@ public class Player_Controller : MonoBehaviour {
     public int coin = 0;
     public Text playerCoin;
 	public Slider healthBar;
-	public static CharacterStats myStats;
+	public static PlayerStats myStats;
+
 
 
 	void Start()
 	{
-		myStats = GetComponent<CharacterStats>();
+		myStats = GetComponent<PlayerStats>();
+        maxSpeed = myStats.speed.getValue();
 	}
 
     // Use this for initialization
@@ -57,6 +59,7 @@ public class Player_Controller : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
+        maxSpeed = myStats.speed.getValue();
 
         //grab the rotation quarternion
         Quaternion rot = transform.rotation;
