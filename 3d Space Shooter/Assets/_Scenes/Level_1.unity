@@ -2674,6 +2674,7 @@ MonoBehaviour:
     baseValue: 2
   armor:
     baseValue: 1
+  enemyHealthBar: {fileID: 0}
   fireRate:
     baseValue: 2
   speed:

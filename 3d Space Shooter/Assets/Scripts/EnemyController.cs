@@ -23,6 +23,7 @@ public class EnemyController : MonoBehaviour
 	private float nextFire;
 	private int update;
 	private EnemyStats enemyStats;
+	public Image enemyHealthBar;
 
 	void Start()
 	{
@@ -39,6 +40,8 @@ public class EnemyController : MonoBehaviour
 		dist = Vector3.Distance(Player.position, transform.position);
 		// Debug.Log (dist);
 		float smooth = 1.0f;
+
+		enemyHealthBar.fillAmount = (float)(GetComponent<CharacterStats> ().currentHealth) / (float)(GetComponent<CharacterStats> ().maxHealth.getValue());
 
 		if(dist <= Max)
 		{
