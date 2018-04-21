@@ -11,7 +11,7 @@ public class Item_Interaction : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            
+
             bool wasPickedUp = Inventory.instance.Add(item);
 
             if (wasPickedUp)

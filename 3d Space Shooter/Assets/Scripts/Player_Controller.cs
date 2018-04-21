@@ -47,7 +47,7 @@ public class Player_Controller : MonoBehaviour {
         }
 
 		//Prevents shot from fireing while game is paused
-		if (!Pause_Menu.GameIsPaused) 
+		if (!Pause_Menu.GameIsPaused)
 		{
 			if (Input.GetButtonDown("Fire1") && Time.time > nextFire)
 			{
@@ -58,10 +58,10 @@ public class Player_Controller : MonoBehaviour {
                 if(equip[2] == null)
                 {
                     shot.GetComponent<CharacterStats>().damage = myStats.damage;
-                    Instantiate(shot, shotSpawn.position, shotSpawn.rotation);          
+                    Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
                 }
                 else
-                {   
+                {
                     GameObject child = shot.transform.GetChild(0).gameObject;
                     shot.GetComponent<CharacterStats>().damage = myStats.damage;
                     child.GetComponent<MeshRenderer>().sharedMaterials[0].mainTexture = equip[2].material;
@@ -76,7 +76,7 @@ public class Player_Controller : MonoBehaviour {
     void FixedUpdate()
     {
         EquipmentManager instance = GetComponent<EquipmentManager>();
-        equip = instance.currentEquipment;        
+        equip = instance.currentEquipment;
         maxSpeed = myStats.speed.getValue();
 
         //grab the rotation quarternion
@@ -102,7 +102,7 @@ public class Player_Controller : MonoBehaviour {
         pos -= rot * velocity;
 
         transform.position = pos;
-        
+
         healthBar.value = myStats.currentHealth;
     }
 

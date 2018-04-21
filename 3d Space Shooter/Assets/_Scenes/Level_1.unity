@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -533,18 +533,16 @@ Prefab:
         type: 2}
       propertyPath: playerCoin
       value: 
-      objectReference: {fileID: 114668803538529124, guid: e488125bde0d23e43a6bef65680484b4,
-        type: 2}
+      objectReference: {fileID: 821953203}
     - target: {fileID: 114817504029597396, guid: ef323ef1346344d01990994395731798,
         type: 2}
       propertyPath: playerScrap
       value: 
-      objectReference: {fileID: 114771904117850460, guid: 350962a69d02ce7448cf1c9009401768,
-        type: 2}
+      objectReference: {fileID: 1062027994}
     - target: {fileID: 114846107315289200, guid: ef323ef1346344d01990994395731798,
         type: 2}
       propertyPath: damage.baseValue
-      value: 22
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef323ef1346344d01990994395731798, type: 2}
@@ -677,12 +675,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98e616cc0bd98459898a3fe96d449a40, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &585779298 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114431114412273660, guid: 148d1f07ba463794889da02e6df83a15,
-    type: 2}
-  m_PrefabInternal: {fileID: 1432810559}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &610498950
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,6 +1436,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 814835528}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &821953203 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114668803538529124, guid: e488125bde0d23e43a6bef65680484b4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1569746248}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &859388698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1553,11 +1551,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224561305527914352, guid: e488125bde0d23e43a6bef65680484b4,
     type: 2}
   m_PrefabInternal: {fileID: 1569746248}
---- !u!1 &971230437 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1905443577986328, guid: 2d4c3822b49816d45bb434ac234ec72f,
-    type: 2}
-  m_PrefabInternal: {fileID: 427840090}
 --- !u!224 &972588433 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224669033625770408, guid: 290fd23dd6df44547b629196eb4c527c,
@@ -1880,11 +1873,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!223 &1078958942 stripped
-Canvas:
-  m_PrefabParentObject: {fileID: 223641295442768918, guid: 148d1f07ba463794889da02e6df83a15,
+--- !u!114 &1062027994 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114771904117850460, guid: 350962a69d02ce7448cf1c9009401768,
     type: 2}
-  m_PrefabInternal: {fileID: 1432810559}
+  m_PrefabInternal: {fileID: 1025957357}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1114446814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,6 +2270,53 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 290fd23dd6df44547b629196eb4c527c, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1254097566
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4312988496557492, guid: 85307f28ac55dc04ab8f4715162b1d6f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312988496557492, guid: 85307f28ac55dc04ab8f4715162b1d6f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312988496557492, guid: 85307f28ac55dc04ab8f4715162b1d6f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312988496557492, guid: 85307f28ac55dc04ab8f4715162b1d6f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312988496557492, guid: 85307f28ac55dc04ab8f4715162b1d6f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312988496557492, guid: 85307f28ac55dc04ab8f4715162b1d6f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312988496557492, guid: 85307f28ac55dc04ab8f4715162b1d6f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312988496557492, guid: 85307f28ac55dc04ab8f4715162b1d6f, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114552197590658582, guid: 85307f28ac55dc04ab8f4715162b1d6f,
+        type: 2}
+      propertyPath: playerShip
+      value: 
+      objectReference: {fileID: 732098924}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 85307f28ac55dc04ab8f4715162b1d6f, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1267950607
 GameObject:
@@ -3843,9 +3884,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4d85b068790964f839cab2d4573515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipSelector: {fileID: 971230437}
-  healthBarDisplay: {fileID: 1078958942}
-  healthBar: {fileID: 585779298}
 --- !u!1 &1561151011
 GameObject:
   m_ObjectHideFlags: 0
@@ -4073,7 +4111,7 @@ Prefab:
     - target: {fileID: 114668803538529124, guid: e488125bde0d23e43a6bef65680484b4,
         type: 2}
       propertyPath: m_Text
-      value: 'Coin: 1'
+      value: 'Coin: 0'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e488125bde0d23e43a6bef65680484b4, type: 2}
@@ -4598,6 +4636,10 @@ Prefab:
       propertyPath: enemyHealthBar
       value: 
       objectReference: {fileID: 2090043753}
+    - target: {fileID: 1489221457868158, guid: 276c29cba0d004e6698b8f63e6f5f1cd, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114490791441654594, guid: 276c29cba0d004e6698b8f63e6f5f1cd, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 276c29cba0d004e6698b8f63e6f5f1cd, type: 2}

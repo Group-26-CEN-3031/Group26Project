@@ -11,11 +11,23 @@ public class CharacterStats : MonoBehaviour
 	public Stat armor;
 
 	void Awake()
-	{	
+	{
 		maxHealth.addModifier(10);
 		currentHealth = maxHealth.getValue();
-		// armor.addModifier(1);
+		//armor.addModifier(1);
 		// damage.addModifier(1);
+	}
+
+	public void SetHealth(int health)
+	{
+		maxHealth.addModifier (health);
+		currentHealth = maxHealth.getValue ();
+	}
+
+	public void SetArmor(int arm)
+	{
+		armor.addModifier (arm);
+		currentHealth = maxHealth.getValue ();
 	}
 
 	void Update()
@@ -47,7 +59,7 @@ public class CharacterStats : MonoBehaviour
 	public virtual void Die()
 	{
 		// Die in some way
-		// Meant to be overriden. 
+		// Meant to be overriden.
 		Debug.Log(transform.name + " dies.");
 	}
 }
