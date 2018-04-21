@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Boundry
-  - Enemy
-  - asteroid
   - scrap
-  - Station
+  - Enemy
+  - Laser
   - coin
+  - Pickup
+  - asteroid
   layers:
   - Default
   - TransparentFX
